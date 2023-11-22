@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.css'
 import styles from "../styles/styles.css";
 import Navbar from "../components/navbar";
 
