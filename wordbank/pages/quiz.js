@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import styles from "../styles/styles.css";
 import Navbar from "../components/navbar";
 
