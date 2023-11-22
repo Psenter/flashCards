@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/styles.css";
 import Navbar from "../components/navbar";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 //holds all react words
 export const reactWords = {
