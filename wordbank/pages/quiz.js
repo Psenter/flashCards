@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../styles.css";
-import Navbar from "../components/Navbar";
+import styles from "../styles/styles";
+import Navbar from "./navbar";
 
 //holds all react words
 export const reactWords = {
@@ -47,33 +47,53 @@ export const jsWords = {
   Loop: "A loop is a structure in code where you perform the same action or actions multiple times in a row.",
 };
 
-export default function WordBank() {
-  const wordData = [
-    ...convertToWordObjects(reactWords, "React"),
-    ...convertToWordObjects(jsWords, "JavaScript"),
-  ];
+const getRandomDefinition = () => {
+  const allDefinitions = {
+    ...reactWords,
+    ...jsWords,
+  };
+  const definitions = Object.keys(allDefinitions);
+  const randomIndex = Math.floor(Math.random() * definitions.length);
+  return {
+    definition: allDefinitions[definitions[randomIndex]],
+    word: definitions[randomIndex],
+  };
+};
 
-  function convertToWordObjects(wordObj, category) {
-    return Object.entries(wordObj).map(([word, definition]) => ({
-      word,
-      definition,
-    }));
-  }
+const Quiz = () => {
+  const [showWord, setShowWord] = useState(false);
+  const [currentDefinition, setCurrentDefinition] = useState(
+    getRandomDefinition()
+  );
 
-  wordData.sort((a, b) => a.word.localeCompare(b.word));
+  const generateNewDefinition = () => {
+    const { definition, word } = getRandomDefinition();
+    setCurrentDefinition({ definition, word });
+    setShowWord(false);
+  };
 
   return (
-    <div>
+    <div className="text-center">
       <Navbar />
-      <h1 className="text-center mt-5 mb-4 heading-font">Word Bank</h1>
-      {wordData.map((item, index) => (
-        <div key={index}>
-          <p className="container mb-4 text-font">
-            <span style={{ fontWeight: "bold" }}>{item.word}</span>:{" "}
-            {item.definition}
-          </p>
+      <h1 className="heading-font mt-4 mb-4">Random Definition</h1>
+      <p className="text-font container mb-4">{currentDefinition.definition}</p>
+      {showWord && (
+        <div className="text-font">
+          <h2>Associated Word:</h2>
+          <p>{currentDefinition.word}</p>
         </div>
-      ))}
+      )}
+      <button
+        className="btn btn-dark me-3"
+        onClick={() => setShowWord(!showWord)}
+      >
+        {showWord ? "Hide Word" : "Show Word"}
+      </button>
+      <button className="btn btn-dark" onClick={generateNewDefinition}>
+        New Definition
+      </button>
     </div>
   );
-}
+};
+
+export default Quiz;
