@@ -1,7 +1,7 @@
 // components/Navbar.js
 import React from "react";
 import Link from "next/link";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Navbar() {
   return (
