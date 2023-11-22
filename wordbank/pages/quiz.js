@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/styles.css";
 import Navbar from "../components/navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //holds all react words
 export const reactWords = {
