@@ -1,8 +1,10 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '../../styles/styles'
+import WordBank from '../../pages/wordBank'
 
 export default function Home() {
   return (
-    <div></div>
+    <div>
+      <WordBank />
+    </div>
   )
 }
