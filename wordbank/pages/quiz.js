@@ -10,7 +10,7 @@ export const reactWords = {
   Reconciliation:
     "When a component’s props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called “reconciliation”.",
   Component:
-    "(most-commonly) A function that accepts props, and returns things to display in the browser.",
+    "(Most-commonly) A function that accepts props, and returns things to display in the browser.",
   Enzyme:
     "A utility that renders React components in tests, and provides methods for querying their state and props.",
   Linting:
