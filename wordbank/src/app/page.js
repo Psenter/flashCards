@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import styles from '../../styles/styles.css'
 import WordBank from '../../pages/wordBank'
 
