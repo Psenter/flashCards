@@ -1,11 +1,13 @@
 import React from "react";
-import "../../styles/styles.css"
+import "../../styles/globals.css";
 import WordBank from "../../pages/wordBank";
 
-export default function Home() {
+const Page = () => {
   return (
     <div>
       <WordBank />
     </div>
   );
-}
+};
+
+export default Page;
