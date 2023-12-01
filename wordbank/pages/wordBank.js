@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css'
 import React from "react";
 import "../styles/styles.css";
 import Navbar from "../components/navbar";
