@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "/../styles/styles.css";
+import "../styles/styles.css"
 import Navbar from "../components/navbar";
 
 //holds all react words
