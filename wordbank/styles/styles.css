@@ -1,3 +1,5 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 .heading-font {
     font-size: 120px;
     text-decoration: underline;
